@@ -180,7 +180,7 @@ nav ul a{
 
 
 /*grid  home*/
-@media only screem and(min-width:0px)and(max-width:767px) {
+@media only screem and(min-width:480px) and (max-width:900px) {
     .home{
         display: grid;
         grid-template-columns:auto;
@@ -251,17 +251,20 @@ nav ul a{
 
 }
 
-@media only scree and (min-width:767px) and (max-width:1900px){
+@media only scree and (min-width:1024px){
 
     /*home*/
+
      .sub-uno{
-        display: grid;
-        grid-template-columns: auto auto ;
-        grid-template-rows: auto;
-        grid-template-areas: "imagen segundo ";
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto;
+      grid-template-areas: "imegen"
+                          "segundo";
+     }
 
 
-    } 
+    
     
 
     .home{
@@ -281,5 +284,14 @@ nav ul a{
                              "dos"
                              "tres";
     }
+
+}
+
+
+/*animaciones*/
+
+nav>ul>a:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px bl;
 
 }
