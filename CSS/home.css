@@ -1,0 +1,285 @@
+/*reset*/
+*
+{padding: 0px;
+margin: 0px;
+box-sizing: border-box;}
+
+
+header div h1{
+    text-align: center;
+}
+
+
+
+/* barra de menu*/
+
+nav ul{ 
+    list-style: none;
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+nav ul a{
+    background-color: aliceblue;
+    padding-inline-start: 0px;
+    margin: 0px;
+    border: 1px solid aliceblue;
+    border-radius: 100px;
+}
+
+
+
+/*imagen portada*/
+
+body>header>img{
+    width:100%;
+}
+nav>ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.imagen{
+    display: flex;
+
+}
+
+
+
+
+/*info main home*/
+
+.texto-uno{ 
+    font-size:large ;
+    background-color: rgb(163, 163, 163);
+    padding: 0px;
+    margin: 0px;
+    border: 4px black solid;
+}
+
+
+
+
+/*info main nosotros*/
+
+.titulo-nosotros{ 
+
+    padding-top: 20px;
+    text-align: center;
+}
+.main-nosotros{
+
+    background-color: rgb(163, 163, 163);
+    padding: 0px;
+    margin: 10px;
+    border: 4px black solid;
+}
+
+
+
+/*vehiculos*/
+.fotos{
+        padding: 40px;
+        margin: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+}
+
+.fotos_uno{ 
+    border: 20px double
+}
+.fotos_dos{
+border:  20px double;
+}
+ .fotos_tres{
+    border: 20px double
+}
+.fotos_cuatro{
+    border: 20px double
+}
+
+.tercero_cinco{
+    background-color: rgb(163, 163, 163);
+    padding: 0px;
+    margin: 0px;
+    border: 4px black solid;
+}
+ header>h1{
+    text-align: center;
+}
+
+
+/*servicios-extras*/
+
+.subtitulo{
+    padding-inline-start: 10px;
+    margin: 30px;
+}
+
+.subtitulo_uno{
+    background-color: aliceblue;
+    padding-inline-start: 0px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.subtitulo_dos{
+    background-color: aliceblue;
+    padding-inline-start: 0px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.subtitulo_tres{
+    background-color: aliceblue;
+    padding-inline-start: 0px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 100px;
+    text-align: center;
+}
+
+
+
+
+/*conactos*/
+
+header>h1{
+    margin: 40px;
+    border: 1px dotted;
+
+}
+footer{
+    margin: 30px;
+    display: flex;
+}
+
+
+/*grids*/
+
+nav ul a{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgb(148, 147, 147);
+    border-radius: 0.5rem;
+    font-weight: bold;
+    box-shadow: 2px 4px rgb(100, 98, 98);
+}
+
+
+/*grid  home*/
+@media only screem and(min-width:0px)and(max-width:767px) {
+    .home{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
+    
+        justify-content: center;
+        align-items:center;
+    }
+
+    header{
+        grid-area: header;
+    }
+    
+    main{
+        grid-area: main;
+    }
+    
+    footer{
+        grid-area: footer;
+    }
+
+    .sub-uno{
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto auto;
+    grid-template-areas: "imagen"
+                        "segundo";}
+
+                    
+  main.imagen{
+    grid-area: imagen;
+}
+  main.segundo{
+    grid-area: segundo;
+}
+
+
+
+
+
+/*nosotros*/
+
+
+    .body-nosotros{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "uno"
+                             "dos"
+                             "tres";
+    }
+
+    header{
+        grid-area:uno;
+    }
+
+    main{
+        grid-area:dos ;
+    }
+
+    footer{
+        grid-area:tres ;
+    }
+
+
+}
+
+@media only scree and (min-width:767px) and (max-width:1900px){
+
+    /*home*/
+     .sub-uno{
+        display: grid;
+        grid-template-columns: auto auto ;
+        grid-template-rows: auto;
+        grid-template-areas: "imagen segundo ";
+
+
+    } 
+    
+
+    .home{
+        grid-auto-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header header"
+                            "main main"
+                            "footer footer";
+    }
+
+    /*nosotros*/
+    .body-nosotros{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "uno"
+                             "dos"
+                             "tres";
+    }
+
+}
