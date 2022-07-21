@@ -13,7 +13,7 @@ header div h1{
 
 /* barra de menu*/
 
-nav ul{ 
+.uno{ 
     list-style: none;
     background-color: black;
     padding: 10px;
@@ -24,7 +24,7 @@ nav ul{
 
 }
 
-nav ul a{
+.dos{
     background-color: aliceblue;
     padding-inline-start: 0px;
     margin: 0px;
