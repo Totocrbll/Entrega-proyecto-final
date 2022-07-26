@@ -5,6 +5,9 @@ margin: 0px;
 box-sizing: border-box;}
 
 
+body{
+    background-color: rgb(210, 241, 231);
+}
 header div h1{
     text-align: center;
 }
@@ -169,6 +172,8 @@ footer{
 
 /*grids*/
 
+
+
 nav ul a{
     margin: 0.5rem;
     padding: 0.5rem;
@@ -180,8 +185,20 @@ nav ul a{
 
 
 /*grid  home*/
-@media only screem and(min-width:480px) and (max-width:900px) {
-    .home{
+@media only screen and (max-width:900px) {
+    
+    body{
+      grid-template-areas: "header"
+                           "main"
+                           "footer";
+    }
+
+
+}
+
+
+@media only screem and(max-width:480px) {
+    body{
         display: grid;
         grid-template-columns:auto;
         grid-template-rows: auto auto auto;
@@ -205,90 +222,37 @@ nav ul a{
         grid-area: footer;
     }
 
+}
+
+@media only screen and(max-width:1200px) {
+    
+    body{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
+    }
+
     .sub-uno{
-    display: grid;
-    grid-template-columns: auto ;
-    grid-template-rows: auto auto;
-    grid-template-areas: "imagen"
-                        "segundo";}
-
-                    
-  main.imagen{
-    grid-area: imagen;
-}
-  main.segundo{
-    grid-area: segundo;
-}
-
-
-
-
-
-/*nosotros*/
-
-
-    .body-nosotros{
         display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "uno"
-                             "dos"
-                             "tres";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "imagen segundo"
+                             "imagen segundo";
     }
 
-    header{
-        grid-area:uno;
+    body>main.imagen{
+        grid-area: imagen;
     }
-
-    main{
-        grid-area:dos ;
+    body>main.texto-uno{
+        grid-area: segundo;
     }
-
-    footer{
-        grid-area:tres ;
-    }
-
-
-}
-
-@media only scree and (min-width:1024px){
-
-    /*home*/
-
-     .sub-uno{
-      display: grid;
-      grid-template-columns: auto auto;
-      grid-template-rows: auto;
-      grid-template-areas: "imegen"
-                          "segundo";
-     }
-
-
-    
-    
-
-    .home{
-        grid-auto-columns: auto auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "header header"
-                            "main main"
-                            "footer footer";
-    }
-
-    /*nosotros*/
-    .body-nosotros{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "uno"
-                             "dos"
-                             "tres";
-    }
-
 }
 
 
-/*animaciones*/
+    /*animaciones*/
 
 nav>ul>a:hover{
     transform: scale(1.1);
