@@ -4,32 +4,48 @@
 margin: 0px;
 box-sizing: border-box;}
 
+/*colores body*/
+body{
+    background-color: rgb(198, 206, 203);
+}
 
 header div h1{
     text-align: center;
 }
 
+/*footer*/
 
+footer{
+    text-align: center;
+}
 
 /* barra de menu*/
 
-nav ul{ 
+.uno{ 
     list-style: none;
     background-color: black;
     padding: 10px;
     margin: 0px;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content:space-around;
 
 }
 
-nav ul a{
-    background-color: aliceblue;
+.dos{
+    text-decoration: none;
     padding-inline-start: 0px;
     margin: 0px;
-    border: 1px solid aliceblue;
     border-radius: 100px;
+    justify-content: space-around;
+    
+}
+
+/*subrayado menu*/
+a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 
 
@@ -43,11 +59,14 @@ nav>ul{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    text-decoration: none;
 
 }
 
+
 .imagen{
     display: flex;
+    flex-wrap: wrap;
 
 }
 
@@ -55,6 +74,10 @@ nav>ul{
 
 
 /*info main home*/
+
+.texto-main{
+    margin: 30px;
+}
 
 .texto-uno{ 
     font-size:large ;
@@ -64,6 +87,9 @@ nav>ul{
     border: 4px black solid;
 }
 
+.imagen-uno{
+text-align: center;
+}
 
 
 
@@ -74,6 +100,8 @@ nav>ul{
     padding-top: 20px;
     text-align: center;
 }
+
+
 .main-nosotros{
 
     background-color: rgb(163, 163, 163);
@@ -169,6 +197,8 @@ footer{
 
 /*grids*/
 
+
+
 nav ul a{
     margin: 0.5rem;
     padding: 0.5rem;
@@ -180,8 +210,20 @@ nav ul a{
 
 
 /*grid  home*/
-@media only screem and(min-width:0px)and(max-width:767px) {
-    .home{
+@media only screen and (max-width:900px) {
+    
+    body{
+      grid-template-areas: "header"
+                           "main"
+                           "footer";
+    }
+
+
+}
+
+
+@media only screem and(max-width:480px) {
+    body{
         display: grid;
         grid-template-columns:auto;
         grid-template-rows: auto auto auto;
@@ -205,81 +247,46 @@ nav ul a{
         grid-area: footer;
     }
 
-    .sub-uno{
-    display: grid;
-    grid-template-columns: auto ;
-    grid-template-rows: auto auto;
-    grid-template-areas: "imagen"
-                        "segundo";}
-
-                    
-  main.imagen{
-    grid-area: imagen;
-}
-  main.segundo{
-    grid-area: segundo;
 }
 
-
-
-
-
-/*nosotros*/
-
-
-    .body-nosotros{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "uno"
-                             "dos"
-                             "tres";
-    }
-
-    header{
-        grid-area:uno;
-    }
-
-    main{
-        grid-area:dos ;
-    }
-
-    footer{
-        grid-area:tres ;
-    }
-
-
-}
-
-@media only scree and (min-width:767px) and (max-width:1900px){
-
-    /*home*/
-     .sub-uno{
-        display: grid;
-        grid-template-columns: auto auto ;
-        grid-template-rows: auto;
-        grid-template-areas: "imagen segundo ";
-
-
-    } 
+@media only screen and(max-width:1200px) {
     
-
-    .home{
-        grid-auto-columns: auto auto;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "header header"
-                            "main main"
-                            "footer footer";
-    }
-
-    /*nosotros*/
-    .body-nosotros{
+    body{
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns:auto;
         grid-template-rows: auto auto auto;
-        grid-template-areas: "uno"
-                             "dos"
-                             "tres";
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
     }
 
+    .sub-uno{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "imagen segundo"
+                             "imagen segundo";
+    }
+
+    body>main.imagen{
+        grid-area: imagen;
+    }
+    body>main.texto-uno{
+        grid-area: segundo;
+    }
+}
+
+
+    /*animaciones*/
+
+.imagen-uno:hover{
+    margin: 20px;
+    transform: scale(1.1);
+    box-shadow: 0.3px 0.2px bl;
+
+}
+
+.fotos:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px bl;
 }
