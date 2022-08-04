@@ -1,0 +1,292 @@
+/*reset*/
+*
+{padding: 0px;
+margin: 0px;
+box-sizing: border-box;}
+
+/*colores body*/
+body{
+    background-color: rgb(198, 206, 203);
+}
+
+header div h1{
+    text-align: center;
+}
+
+/*footer*/
+
+footer{
+    text-align: center;
+}
+
+/* barra de menu*/
+
+.uno{ 
+    list-style: none;
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+}
+
+.dos{
+    
+    padding-inline-start: 0px;
+    margin: 0px;
+    border-radius: 100px;
+    justify-content: space-around;
+    
+}
+
+/*subrayado menu*/
+a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+
+
+/*imagen portada*/
+
+body>header>img{
+    width:100%;
+}
+nav>ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
+
+}
+
+
+.imagen{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+/*info main home*/
+
+.texto-main{
+    margin: 30px;
+}
+
+.texto-uno{ 
+    font-size:large ;
+    background-color: rgb(163, 163, 163);
+    padding: 0px;
+    margin: 0px;
+    border: 4px black solid;
+}
+
+.imagen-uno{
+text-align: center;
+}
+
+
+
+/*info main nosotros*/
+
+.titulo-nosotros{ 
+
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+.main-nosotros{
+
+    background-color: rgb(163, 163, 163);
+    padding: 0px;
+    margin: 10px;
+    border: 4px black solid;
+}
+
+
+
+/*vehiculos*/
+.fotos{
+        padding: 40px;
+        margin: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+}
+
+.fotos_uno{ 
+    border: 20px double
+}
+.fotos_dos{
+border:  20px double;
+}
+ .fotos_tres{
+    border: 20px double
+}
+.fotos_cuatro{
+    border: 20px double
+}
+
+.tercero_cinco{
+    background-color: rgb(163, 163, 163);
+    padding: 0px;
+    margin: 0px;
+    border: 4px black solid;
+}
+ header>h1{
+    text-align: center;
+}
+
+
+/*servicios-extras*/
+
+.subtitulo{
+    padding-inline-start: 10px;
+    margin: 30px;
+}
+
+.subtitulo_uno{
+    background-color: aliceblue;
+    padding-inline-start: 0px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.subtitulo_dos{
+    background-color: aliceblue;
+    padding-inline-start: 0px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.subtitulo_tres{
+    background-color: aliceblue;
+    padding-inline-start: 0px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 100px;
+    text-align: center;
+}
+
+
+
+
+/*conactos*/
+
+header>h1{
+    margin: 40px;
+    border: 1px dotted;
+
+}
+footer{
+    margin: 30px;
+    display: flex;
+}
+
+
+/*grids*/
+
+
+
+nav ul a{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgb(148, 147, 147);
+    border-radius: 0.5rem;
+    font-weight: bold;
+    box-shadow: 2px 4px rgb(100, 98, 98);
+}
+
+
+/*grid  home*/
+@media only screen and (max-width:900px) {
+    
+    body{
+      grid-template-areas: "header"
+                           "main"
+                           "footer";
+    }
+
+
+}
+
+
+@media only screem and(max-width:480px) {
+    body{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
+    
+        justify-content: center;
+        align-items:center;
+    }
+
+    header{
+        grid-area: header;
+    }
+    
+    main{
+        grid-area: main;
+    }
+    
+    footer{
+        grid-area: footer;
+    }
+
+}
+
+@media only screen and(max-width:1200px) {
+    
+    body{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "header"
+                             "main"
+                             "footer";
+    }
+
+    .sub-uno{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "imagen segundo"
+                             "imagen segundo";
+    }
+
+    body>main.imagen{
+        grid-area: imagen;
+    }
+    body>main.texto-uno{
+        grid-area: segundo;
+    }
+}
+
+
+    /*animaciones*/
+
+.imagen-uno:hover{
+    margin: 20px;
+    transform: scale(1.1);
+    box-shadow: 0.3px 0.2px bl;
+
+}
+
+.fotos:hover{
+    transform: scale(1.1);
+    box-shadow: 1px 1px bl;
+}
