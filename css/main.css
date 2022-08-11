@@ -122,16 +122,20 @@ text-align: center;
 }
 
 .fotos_uno{ 
-    border: 20px double
+    border: 20px double;
+    width: 50%;
 }
 .fotos_dos{
 border:  20px double;
+width: 60%;
 }
  .fotos_tres{
-    border: 20px double
+    border: 20px double;
+    width: 60%;
 }
 .fotos_cuatro{
-    border: 20px double
+    border: 20px double;
+    width: 60%;
 }
 
 .tercero_cinco{
