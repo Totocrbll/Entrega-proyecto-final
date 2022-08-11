@@ -1,13 +1,19 @@
-//variables
- 
-$color-uno:rgb(198, 206, 203);
+ @import "base/variables.scss";
+ @import "base/listas.scss";
+ @import "base/mixin.scss";
+ @import "base/extend.scss";
+
 
 /*body*/
 
 body{
-    margin: 0px;
-    padding: 0px;
-background-color: $color-uno;
+    /*variables*/
+    background-color: $color-uno;
+
+    /*listas*/
+    margin: nth($list:$medidas, $n:1 );
+    padding: nth($list:$medidas, $n:1 );
+
 }
 
 /*menu home */
@@ -15,6 +21,7 @@ background-color: $color-uno;
 header{ 
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 
     img{
         display:flex ;
@@ -26,17 +33,14 @@ header{
         background-color: black;
         padding: 0px;
         margin: 0px;
-        display: flex;
-        justify-content: space-around;
+        /*mixin*/
+        @include flex-boton
     
     }
-    a{  margin: 20px;
-        padding: 5px;
-        text-decoration: none;
-        border-bottom: 30px;
-        background-color: rgb(132, 148, 148);
-        font-weight: 900;
-        border-radius: 10%;  
+    /*boton menu extend*/
+    a{  
+      
+        @extend %boton-menu;
     }
     
     div{/*titutlo*/
@@ -48,12 +52,14 @@ header{
 
 main{
 
-    /*imagen */
+    
  .sub-uno{
+    /*imagen */
     width: 100%;
+    
  }
 
- h2{
+ p{
     /*texto cuerpo de main*/
     font-size:large ;
     background-color: rgb(163, 163, 163);
@@ -68,8 +74,8 @@ footer{
 }
 
 
-
- body{ /*mediaqueries*/
+/*mediaqueries*/
+ body{ 
 @media only screen and (min-width:900px) and (max-width:999px) {
     
     body{
@@ -115,6 +121,6 @@ footer{
     }
 
     .imagen-uno{
-        margin-left: 500px;
+        margin-left: 32%;
     }
  }
