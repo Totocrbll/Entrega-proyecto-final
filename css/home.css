@@ -1,0 +1,160 @@
+/*listas*/
+/*mixin*/
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+/*pagina nosotro*/
+body .titulo-nosotros {
+  /*titulo nosotros*/
+  display: flex;
+  padding-top: 10px;
+  text-align: center; }
+
+main .main-nosotros {
+  /*cuerpo main nostros*/
+  background-color: #a3a3a3;
+  /*uso de lista*/
+  padding: 0px;
+  margin: 10px;
+  border: 4px black solid; }
+
+/*pagina vehiculos*/
+header .titulo-vehiculos {
+  /*titulo vehiculos*/
+  text-align: center; }
+
+main .tercero_cinco {
+  /*texto vehiculos*/
+  background-color: #a3a3a3;
+  padding: 0px;
+  margin: 0px;
+  border: 4px black solid; }
+
+main .fotos:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 0.5px 0.5px bl; }
+
+/*pagina servios extras*/
+header .titulo-servicios {
+  /*titulo servicios*/
+  display: flex;
+  text-align: center; }
+
+/*cuerpo main servicio*/
+main .subtitulo {
+  padding-inline-start: 10px;
+  margin: 30px; }
+
+main .subtitulo_uno {
+  background-color: aliceblue;
+  padding-inline-start: 0px;
+  margin: 10px;
+  border: 5px solid black;
+  border-radius: 100px;
+  text-align: center; }
+
+main .subtitulo_dos {
+  background-color: aliceblue;
+  padding-inline-start: 0px;
+  margin: 10px;
+  border: 5px solid black;
+  border-radius: 100px;
+  text-align: center; }
+
+main .subtitulo_tres {
+  background-color: aliceblue;
+  padding-inline-start: 0px;
+  margin: 10px;
+  border: 5px solid black;
+  border-radius: 100px;
+  text-align: center; }
+
+/*pagina contato*/
+main .titulo-formulario {
+  text-align: center; }
+
+/*pagina incio */
+body {
+  background-color: #c6c6c7;
+  /*extend*/
+  /*listas*/
+  margin: 0px;
+  padding: 0px; }
+  body .titulo-nosotros {
+    padding-top: 10px;
+    text-align: center; }
+
+main .texto-main {
+  display: flex;
+  text-align: center; }
+
+main .sub-uno {
+  /*imagen */
+  width: 100%; }
+
+main .texto-uno {
+  /*texto cuerpo de main*/
+  font-size: large;
+  background-color: #a3a3a3;
+  padding: 0px;
+  margin: 0px;
+  border: 4px black solid; }
+
+footer {
+  text-align: center; }
+
+/*mediaqueries*/
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
+  body body {
+    grid-template-areas: "header" "main" "footer"; }
+  body img {
+    width: 80%;
+    display: block;
+    margin: auto; }
+  body .imagen-uno {
+    width: 100%; }
+  body .imagen-logo {
+    /*mixin*/
+    margin-top: 45px;
+    width: 100%; } }
+
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+  body body {
+    grid-template-areas: "header" "main" "footer"; }
+  body img {
+    width: 98%;
+    display: block;
+    margin: auto; }
+  body .imagen-logo {
+    /*mixin*/
+    margin-top: 45px;
+    width: 100%; } }
+
+@media only screen and (min-width: 600px) and (max-width: 899px) {
+  body {
+    grid-template-areas: "header" "main" "footer"; }
+  img {
+    width: 98%;
+    display: block;
+    margin: auto; }
+  .imagen-logo {
+    /*mixin*/
+    margin-top: 45px;
+    width: 100%; } }
+
+@media only screen and (min-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "main" "footer"; }
+  img {
+    width: 50%;
+    display: block;
+    margin: auto; }
+  .imagen-logo {
+    /*mixin*/
+    margin-top: 45px;
+    width: 100%; } }

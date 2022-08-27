@@ -1,0 +1,45 @@
+ 
+/*pagina servios extras*/
+ header{
+
+    .titulo-servicios{
+        /*titulo servicios*/
+      display: flex;
+      text-align: center;
+   
+    }
+}
+   /*cuerpo main servicio*/
+main{ 
+    .subtitulo{
+        padding-inline-start: nth($list:$medidas, $n:2 );
+        margin: nth($list:$medidas, $n:4 );
+    }
+    
+    .subtitulo_uno{
+        background-color: $color-dos;
+        padding-inline-start:nth($list:$medidas, $n:1 );
+        margin: nth($list:$medidas, $n:2 );
+        border: 5px solid $color-uno;
+        border-radius: 100px;
+        text-align: center;
+    }
+    
+    .subtitulo_dos{
+        background-color: $color-dos;
+        padding-inline-start: nth($list:$medidas, $n:1 );
+        margin: nth($list:$medidas, $n:2 );
+        border: 5px solid $color-uno;
+        border-radius: 100px;
+        text-align: center;
+    }
+    
+    .subtitulo_tres{
+        background-color: $color-dos;
+        padding-inline-start:nth($list:$medidas, $n:1 );
+        margin: nth($list:$medidas, $n:2 );
+        border: 5px solid $color-uno;
+        border-radius: 100px;
+        text-align: center;
+    }
+ }

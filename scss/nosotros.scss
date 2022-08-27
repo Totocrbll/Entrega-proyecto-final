@@ -1,0 +1,20 @@
+ /*pagina nosotro*/
+body{
+    .titulo-nosotros{ 
+        /*titulo nosotros*/
+        display: flex;
+        padding-top: nth($list:$medidas, $n:2 );
+        text-align: center;
+    }
+}
+ main{
+.main-nosotros{
+    /*cuerpo main nostros*/
+
+    background-color: $color-tres;
+    /*uso de lista*/
+    padding: nth($list:$medidas, $n:1 );
+    margin:nth($list:$medidas, $n:2 );
+    border: 4px black solid;
+}
+}

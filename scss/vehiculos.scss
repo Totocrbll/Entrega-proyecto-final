@@ -1,0 +1,24 @@
+/*pagina vehiculos*/
+
+header{
+   
+    .titulo-vehiculos{
+         /*titulo vehiculos*/
+       text-align: center;
+    }
+}
+
+main{
+    .tercero_cinco{
+        /*texto vehiculos*/
+        background-color: rgb(163, 163, 163);
+        padding: nth($list:$medidas, $n:1 );
+        margin: nth($list:$medidas, $n:1 );
+        border: 4px black solid;
+    }
+
+    .fotos:hover{
+        transform: scale(0.9,0.9);
+        box-shadow: 0.5px 0.5px bl;
+    }
+}

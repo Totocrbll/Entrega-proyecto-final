@@ -1,0 +1,13 @@
+/*mixin*/
+
+@mixin flex-boton {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+@mixin portada-uno {
+        margin-top: 45px;
+        width: 100%;
+    
+}
