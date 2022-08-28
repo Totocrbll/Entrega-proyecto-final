@@ -1,7 +1,5 @@
 /*pagina contato*/
 
 main{
-    .titulo-formulario  {
-        text-align: center;
-    }
+    @extend %texto-uno;
 }
